@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cardápio da La Bella Pizza.">
+<title>La Bella Pizza | Cardápio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container header-container">
+<a class="logo" href="index.html"><i>🍕</i><h1>La Bella Pizza</h1></a>
+<nav class="nav-menu"><ul><li><a href="index.html">Início</a></li><li><a class="active" href="cardapio.html">Cardápio</a></li><li><a href="entregas.html">Entregas</a></li></ul></nav>
+<div class="header-actions"><button class="theme-toggle" id="theme-btn" type="button" aria-label="Alternar tema">🌙</button><button class="cart-icon-btn" id="cart-btn" type="button" aria-label="Abrir carrinho">🛒<span class="cart-count" id="cart-count">0</span></button><button class="mobile-menu-btn" id="mobile-menu-btn" type="button">☰</button></div>
+</div><nav class="mobile-menu" id="mobile-menu"><ul><li><a href="index.html">Início</a></li><li><a href="cardapio.html">Cardápio</a></li><li><a href="entregas.html">Entregas</a></li></ul></nav></header>
+
+<main>
+<section class="page-hero"><div class="container"><h2>Nosso Cardápio</h2><p>Mais de 40 sabores artesanais esperando por você.</p><div class="breadcrumb"><a href="index.html">Início</a> / Cardápio</div></div></section>
+<section class="filters"><div class="container">
+<div class="filter-row" id="category-filters">
+<button class="filter-btn active" data-category="todas">🍕 Todas</button><button class="filter-btn" data-category="tradicional">🇮🇹 Tradicionais</button><button class="filter-btn" data-category="especial">⭐ Especiais</button><button class="filter-btn" data-category="premium">👑 Premium</button><button class="filter-btn" data-category="vegetariana">🌿 Vegetarianas</button><button class="filter-btn" data-category="doce">🍫 Doces</button><button class="filter-btn" data-category="bebidas">🥤 Bebidas</button>
+</div>
+<div class="filter-tools"><input id="menu-search" type="search" placeholder="Buscar pizza ou ingrediente..." aria-label="Buscar no cardápio"><select id="menu-sort" aria-label="Ordenar cardápio"><option value="popular">Mais popular</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="az">A-Z</option></select></div>
+</div></section>
+<section class="menu-section"><div class="container"><p class="result-count" id="result-count"></p><div class="menu-grid" id="menu-grid"></div></div></section>
+</main>
+
+<footer class="footer"><div class="container footer-content"><section class="footer-section"><h3>La Bella Pizza</h3><p>Feito com ❤️ e muito queijo desde 1995.</p></section><section class="footer-section"><h4>Atendimento</h4><p>📞 (11) 99999-9999</p><p>🕐 18h às 23h</p></section><section class="footer-section"><h4>Navegação</h4><p><a href="index.html">Início</a></p><p><a href="entregas.html">Entregas</a></p></section></div><div class="container footer-bottom">© 2026 La Bella Pizza — Projeto acadêmico.</div></footer>
+
+<div id="cart-drawer" aria-hidden="true"><aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Carrinho"><div class="cart-head"><h2>Seu carrinho</h2><button id="cart-close" type="button">×</button></div><div id="cart-items"></div><div class="cart-summary"><div class="cart-total"><span>Total</span><strong id="cart-total">R$ 0,00</strong></div><div class="cart-actions"><button class="btn btn-secondary" id="cart-clear" type="button">Limpar</button><a class="btn btn-primary" href="entregas.html">Finalizar</a></div></div></aside></div>
+<script src="script.js"></script>
+</body></html>
+
+
+
+
+
+arrume o codigo para que fique mais facil adcionar as imagens, adicione mais sabores de pizza, quero 20 sabpores de pizza por categoria todas com nome sem repetir, a categoria vegetariana deve conter apenas 10 sabores de pizza, em outros itens tbm  como bebidas etc quero que modifique todo o codigo e me entregue pronto por gentileza

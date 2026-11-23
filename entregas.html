@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Faça seu pedido e acompanhe sua entrega na La Bella Pizza.">
+<title>La Bella Pizza | Entregas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container header-container">
+<a class="logo" href="index.html"><i>🍕</i><h1>La Bella Pizza</h1></a>
+<nav class="nav-menu"><ul><li><a href="index.html">Início</a></li><li><a href="cardapio.html">Cardápio</a></li><li><a class="active" href="entregas.html">Entregas</a></li></ul></nav>
+<div class="header-actions"><button class="theme-toggle" id="theme-btn" type="button">🌙</button><button class="cart-icon-btn" id="cart-btn" type="button" aria-label="Abrir carrinho">🛒<span class="cart-count" id="cart-count">0</span></button><button class="mobile-menu-btn" id="mobile-menu-btn" type="button">☰</button></div>
+</div><nav class="mobile-menu" id="mobile-menu"><ul><li><a href="index.html">Início</a></li><li><a href="cardapio.html">Cardápio</a></li><li><a href="entregas.html">Entregas</a></li></ul></nav></header>
+
+<main>
+<section class="page-hero"><div class="container"><h2>Faça seu Pedido</h2><p>Preencha os dados e acompanhe o pedido.</p><div class="breadcrumb"><a href="index.html">Início</a> / Entregas</div></div></section>
+
+<section class="delivery-section"><div class="container">
+<div class="status-card"><span class="status-dot" id="status-dot"></span><div><strong id="store-status">Verificando...</strong><span id="store-status-detail">Consultando horário de atendimento.</span></div></div>
+
+<div class="tracking-container">
+<div class="step-indicator"><span class="step-pill active" data-pill="1">1. Dados</span><span class="step-pill" data-pill="2">2. Endereço</span><span class="step-pill" data-pill="3">3. Pagamento</span></div>
+
+<form id="order-form" novalidate>
+<section class="form-step active" data-step="1">
+<h3>Seus dados</h3>
+<input class="checkout-input" id="nome" type="text" placeholder="Seu nome completo *" autocomplete="name" required>
+<input class="checkout-input" id="telefone" type="tel" placeholder="WhatsApp (com DDD) *" autocomplete="tel" required>
+<input class="checkout-input" id="email" type="email" placeholder="Email (opcional)" autocomplete="email">
+<div class="form-actions"><span></span><button class="btn btn-primary" type="button" data-next>Continuar →</button></div>
+</section>
+
+<section class="form-step" data-step="2">
+<h3>Endereço de entrega</h3>
+<input class="checkout-input" id="cep" type="text" inputmode="numeric" maxlength="9" placeholder="CEP *" required>
+<input class="checkout-input" id="rua" type="text" placeholder="Rua *" required>
+<div style="display:grid;grid-template-columns:1fr 2fr;gap:10px"><input class="checkout-input" id="numero" type="text" placeholder="Número *" required><input class="checkout-input" id="complemento" type="text" placeholder="Complemento"></div>
+<input class="checkout-input" id="bairro" type="text" placeholder="Bairro *" required>
+<input class="checkout-input" id="cidade" type="text" placeholder="Cidade" readonly>
+<select class="checkout-input" id="forma-retirada"><option value="entrega">🛵 Entrega em domicílio</option><option value="retirada">🏪 Retirar na loja</option></select>
+<div class="form-actions"><button class="btn btn-secondary" type="button" data-prev>← Voltar</button><button class="btn btn-primary" type="button" data-next>Continuar →</button></div>
+</section>
+
+<section class="form-step" data-step="3">
+<h3>Pagamento e resumo</h3>
+<div class="order-summary-box" id="checkout-summary"></div>
+<select class="checkout-input" id="pagamento"><option value="cartao">💳 Cartão de Crédito/Débito</option><option value="dinheiro">💵 Dinheiro</option><option value="pix">📱 PIX</option></select>
+<input class="checkout-input" id="troco" type="number" min="0" step="0.01" placeholder="Troco para quanto?" style="display:none">
+<div class="notice">O pedido é uma simulação acadêmica. Nenhum pagamento real será realizado.</div>
+<div class="form-actions"><button class="btn btn-secondary" type="button" data-prev>← Voltar</button><button class="btn btn-primary" type="submit">🍕 Confirmar pedido</button></div>
+</section>
+</form>
+</div>
+
+<div class="tracking-container" style="margin-top:25px" id="tracking-box">
+<div class="order-info"><h3>Acompanhe seu pedido</h3><p id="tracking-number">Nenhum pedido realizado nesta sessão.</p><p id="tracking-time">Quando você confirmar um pedido, o acompanhamento aparecerá aqui.</p></div>
+<div class="progress-tracker"><div class="progress-steps">
+<div class="step active" data-track="0"><div class="step-icon">🧾</div><span class="step-label">Recebido</span></div>
+<div class="step" data-track="1"><div class="step-icon">👨‍🍳</div><span class="step-label">Preparando</span></div>
+<div class="step" data-track="2"><div class="step-icon">🔥</div><span class="step-label">Assando</span></div>
+<div class="step" data-track="3"><div class="step-icon">🛵</div><span class="step-label">Saiu para entrega</span></div>
+<div class="step" data-track="4"><div class="step-icon">🏠</div><span class="step-label">Entregue</span></div>
+</div><div class="progress-bar-track"><div class="progress-fill" id="progress-fill"></div></div></div>
+<div class="tracking-controls"><p class="current-status">Status: <strong id="current-status">Aguardando pedido</strong></p></div>
+</div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="container footer-content"><section class="footer-section"><h3>La Bella Pizza</h3><p>Feito com ❤️ e muito queijo desde 1995.</p></section><section class="footer-section"><h4>Contato</h4><p>📞 (11) 99999-9999</p><p>📍 Rua das Pizzas, 100</p></section><section class="footer-section"><h4>Horário</h4><p>Todos os dias, 18h às 23h.</p></section></div><div class="container footer-bottom">© 2026 La Bella Pizza — Projeto acadêmico.</div></footer>
+
+<div id="cart-drawer" aria-hidden="true"><aside class="cart-panel" role="dialog" aria-modal="true"><div class="cart-head"><h2>Seu carrinho</h2><button id="cart-close" type="button">×</button></div><div id="cart-items"></div><div class="cart-summary"><div class="cart-total"><span>Total</span><strong id="cart-total">R$ 0,00</strong></div><div class="cart-actions"><button class="btn btn-secondary" id="cart-clear" type="button">Limpar</button><button class="btn btn-primary" type="button" id="go-checkout">Voltar ao pedido</button></div></div></aside></div>
+
+<div class="modal" id="success-modal"><div class="modal-content"><div class="modal-header"><h2>Pedido confirmado! 🎉</h2><button class="modal-close" type="button" data-close-modal>×</button></div><div class="modal-body"><div class="success-icon">🍕</div><p style="text-align:center">Seu pedido foi registrado com sucesso.</p><div class="order-number" id="success-number">Pedido #0000</div><div id="success-summary" class="notice"></div><div class="tracking-actions"><button class="btn btn-primary" type="button" data-close-modal>Acompanhar pedido</button><a class="btn btn-secondary" href="index.html">Voltar ao início</a></div></div></div></div>
+
+<script src="script.js"></script>
+</body></html>

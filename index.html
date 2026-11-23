@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="La Bella Pizza — pizzas artesanais e entrega rápida.">
+<title>La Bella Pizza | Início</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<div id="loader" aria-label="Carregando La Bella Pizza">
+  <div class="loader-content">
+    <div class="logo-loader"><i>🍕</i><h2>La Bella Pizza</h2></div>
+    <div class="progress-bar-container"><div class="progress-bar" id="loader-progress"></div></div>
+    <p class="loader-text" id="loader-text">Aquecendo o forno. 🔥</p>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header-container">
+    <a class="logo" href="index.html" aria-label="La Bella Pizza - início">
+      <i>🍕</i><h1>La Bella Pizza</h1>
+    </a>
+    <nav class="nav-menu" aria-label="Navegação principal">
+      <ul>
+        <li><a class="active" href="index.html">Início</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="entregas.html">Entregas</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-btn" type="button" aria-label="Alternar tema">🌙</button>
+      <button class="cart-icon-btn" id="cart-btn" type="button" aria-label="Abrir carrinho">🛒<span class="cart-count" id="cart-count">0</span></button>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Abrir menu">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="entregas.html">Entregas</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+<section class="hero">
+  <div class="container hero-content">
+    <h2>Sabor Autêntico,<br>Tradição Italiana </h2>
+    <p>Pizzas artesanais feitas com ingredientes frescos, assadas no forno a lenha e preparadas com carinho.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary btn-large" href="cardapio.html">🍕 Ver Cardápio</a>
+      <a class="btn btn-secondary btn-large" href="entregas.html">🛵 Fazer Pedido</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-badge">⭐ 4.9 no Google</span>
+      <span class="hero-badge">🕐 Aberto até 23h</span>
+      <span class="hero-badge">🚀 Entrega em 40min</span>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Por que nos escolher</span>
+      <h2>Feita como pizza deve ser</h2>
+      <p>Qualidade, tradição e sabor em cada fatia.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card"><i>🔥</i><h3>Forno a Lenha</h3><p>Assada em alta temperatura para uma massa leve e saborosa.</p></article>
+      <article class="feature-card"><i>🌿</i><h3>Ingredientes Frescos</h3><p>Selecionamos ingredientes de qualidade para cada receita.</p></article>
+      <article class="feature-card"><i>🚀</i><h3>Entrega Rápida</h3><p>Seu pedido chega quentinho e bem embalado.</p></article>
+      <article class="feature-card"><i>❤️</i><h3>Receita da Família</h3><p>Um toque artesanal que faz parte da nossa história.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Mais pedidas</span>
+      <h2>As Favoritas dos Nossos Clientes</h2>
+      <p>Escolha sua favorita e adicione ao pedido.</p>
+    </div>
+    <div class="pizzas-grid" id="featured-pizzas"></div>
+    <div style="text-align:center"><a class="btn btn-primary" href="cardapio.html">Ver cardápio completo</a></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container about-content">
+    <div class="about-text">
+      <span class="section-tag">Nossa história</span>
+      <h2>Feito com ❤️ e muito queijo desde 1995</h2>
+      <p>A La Bella Pizza nasceu de uma receita de família e cresceu mantendo o cuidado com a massa, o molho e os ingredientes.</p>
+      <p>Hoje, levamos essa tradição para sua mesa com um atendimento simples, rápido e acolhedor.</p>
+      <a class="btn btn-primary" href="entregas.html">Pedir agora</a>
+    </div>
+    <div class="about-image" aria-hidden="true"><i>🍕</i></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <section class="footer-section"><h3>La Bella Pizza</h3><p>Feito com ❤️ e muito queijo desde 1995.</p></section>
+    <section class="footer-section"><h4>Links rápidos</h4><p><a href="index.html">Início</a></p><p><a href="cardapio.html">Cardápio</a></p><p><a href="entregas.html">Entregas</a></p></section>
+    <section class="footer-section"><h4>Contato</h4><p>📍 Rua das Pizzas, 100</p><p>📞 (11) 99999-9999</p><p>🕐 Todos os dias, 18h às 23h</p></section>
+  </div>
+  <div class="container footer-bottom">© 2026 La Bella Pizza — Projeto acadêmico.</div>
+</footer>
+
+<div id="cart-drawer" aria-hidden="true">
+  <aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Carrinho">
+    <div class="cart-head"><h2>Seu carrinho</h2><button id="cart-close" type="button" aria-label="Fechar carrinho">×</button></div>
+    <div id="cart-items"></div>
+    <div class="cart-summary">
+      <div class="cart-total"><span>Total</span><strong id="cart-total">R$ 0,00</strong></div>
+      <div class="cart-actions"><button class="btn btn-secondary" id="cart-clear" type="button">Limpar</button><a class="btn btn-primary" href="entregas.html">Finalizar</a></div>
+    </div>
+  </aside>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
